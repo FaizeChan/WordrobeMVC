@@ -81,3 +81,7 @@ p {
 .SecondHeader {
     text-align: center;
 }
+
+.Main-Header {
+    height: 300px;
+}
