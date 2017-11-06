@@ -1,0 +1,25 @@
+﻿@model IEnumerable<WordrobeMVC.Models.Top>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1 class="page-header">Tops</h1>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach (var item in Model)
+{
+    <div class="col-sm-6 col-md-4" id="Clothes">
+    <div class="row">
+        <img class="myPictures"src="@Html.DisplayFor(modelItem => item.Photo)" />
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = item.TopsID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.TopsID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.TopsID })
+    </p>
+        </div>
+        </div>
+}
